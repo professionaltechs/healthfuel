@@ -1,0 +1,227 @@
+.topContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.navbar {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 12px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "fimiar", sans-serif !important;
+}
+
+.menuButton {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border-radius: 50%;
+  border: solid 2px white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  align-items: center;
+  cursor: pointer;
+  transition: gap 300ms;
+  z-index: 1;
+  background-color: transparent;
+  /* pointer-events: none; */
+}
+
+.menuButtonCloseGap {
+  gap: 0px;
+}
+
+.menuBars {
+  height: 2px;
+  width: 24px;
+  rotate: 0deg;
+  transition: rotate 300ms;
+  background: white;
+}
+
+.menuPdfButton {
+  display: none;
+}
+
+.navbarDropDown {
+  height: 100vh;
+  overflow-y: auto;
+  width: 100vw;
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  background-color: #151515;
+  transition: all 400ms ease-out;
+  top: -100vh;
+  color: white;
+  padding-top: 100px;
+  padding-left: 7vw;
+  padding-right: 7vw;
+}
+
+.navbarDropDownDetails {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 15px;
+  color: white;
+}
+
+
+
+.dropDownMenuPdfContainerInner {
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+
+}
+
+.dropDownMenuPdf {
+    font-size: 35px;
+}
+
+.navbarDropDownLogo {
+  font-size: 60px;
+}
+
+.horizontailRow {
+  border-color: white;
+  width: 100%;
+  max-width: 320px;
+}
+
+.greytext {
+  line-height: 20px;
+  color: #d0d0d0;
+}
+
+.locationSpan {
+  color: white;
+}
+
+.topContent {
+  flex-grow: 1;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+
+.topContentInner {
+  margin: auto auto 0px auto;
+  padding-bottom: 70px;
+  color: white;
+  text-align: center;
+}
+
+.logo {
+  /* width: 200px;
+    height: auto; */
+  font-size: 80px;
+  margin-bottom: 30px;
+  /* color: black; */
+  color: white;
+}
+
+.trust {
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.locationText {
+  margin-bottom: 25px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+}
+
+@media (min-width: 480px) {
+  .menuPdfButton {
+    display: block;
+    cursor: pointer;
+    color: white;
+    padding: 15px 50px;
+    border: solid 2px white;
+    border-radius: 100px;
+    background-color: transparent;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+
+  .navbarDropDownInner {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dropDownMenuPdf {
+    font-size: 60px;
+  }
+
+  .navbarDropDownLogo {
+    font-size: 80px;
+  }
+
+  .downloadLogo {
+    font-size: 25px;
+  }
+
+  .dropDownMenuPdfContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+
+  .navbarDropDownDetails {
+    width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    padding: 25px 24px;
+  }
+
+  .topContent {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbarDropDown {
+    padding-left: 9vw;
+    padding-right: 9vw;
+  }
+
+  .topContent {
+    width: 70%;
+  }
+
+  .topContentInner {
+    padding-bottom: 30px;
+  }
+}
