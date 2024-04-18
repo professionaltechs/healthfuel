@@ -18,7 +18,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const downloadPDF = useCallback(async () => {
-    const pdfUrl = "./menu.pdf";
+    const pdfUrl = "./test.pdf";
     const pdfResponse = await fetch(pdfUrl);
     if (!pdfResponse.ok) {
       throw new Error("Failed to preload the PDF file");
