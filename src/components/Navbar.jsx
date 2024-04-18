@@ -9,7 +9,8 @@ import styles from "../app/page.module.css";
 
 // ICONS
 import { FiDownload } from "react-icons/fi";
-import logo from '../assets/LogoBlue.png'
+import logo from "../assets/LogoBlue.png";
+import { FaInstagram } from "react-icons/fa6";
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -17,6 +18,7 @@ const Navbar = () => {
   const downloadPDF = useCallback(() => {
     const pdfUrl = "./menu.pdf";
     saveAs(pdfUrl, "menu.pdf");
+    window.open(pdfUrl, "_blank");
   }, []);
 
   useEffect(() => {
@@ -60,9 +62,12 @@ const Navbar = () => {
         <div className={styles.menuBars}></div>
         <div className={styles.menuBars}></div>
       </button>
-      <button className={styles.menuPdfButton} onClick={downloadPDF}>
-        View Menu
-      </button>
+      <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+        <button className={styles.menuPdfButton} onClick={downloadPDF}>
+          View Menu
+        </button>
+        <FaInstagram style={{fontSize: '25px', color: 'white', cursor: 'pointer '}}/>
+      </div>
       <div className={`${styles.navbarDropDown}`}>
         <div className={styles.navbarDropDownInner}>
           <div className={styles.dropDownMenuPdfContainer}>
@@ -71,12 +76,12 @@ const Navbar = () => {
               onClick={downloadPDF}
             >
               <h1 className={styles.dropDownMenuPdf}>Menu</h1>
-              <FiDownload className={styles.downloadLogo}/>
+              <FiDownload className={styles.downloadLogo} />
             </div>
           </div>
           <div className={styles.navbarDropDownDetails}>
             {/* <h1 className={styles.navbarDropDownLogo}>Logo</h1> */}
-            <Image src={logo} alt="Logo" className={styles.mainLogo}/>
+            <Image src={logo} alt="Logo" className={styles.mainLogo} />
             <div>
               <p className={styles.greytext}>
                 <span className={styles.locationSpan}>Monday: </span>Closed
