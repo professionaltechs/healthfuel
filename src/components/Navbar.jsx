@@ -12,15 +12,17 @@ import { FiDownload } from "react-icons/fi";
 import logo from "../assets/LogoBlue.png";
 import { FaInstagram } from "react-icons/fa6";
 
+// PDF
+
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const downloadPDF = useCallback(async () => {
     const pdfUrl = "./menu.pdf";
-    // const pdfResponse = await fetch(pdfUrl);
-    // if (!pdfResponse.ok) {
-    //   throw new Error("Failed to preload the PDF file");
-    // }
+    const pdfResponse = await fetch(pdfUrl);
+    if (!pdfResponse.ok) {
+      throw new Error("Failed to preload the PDF file");
+    }
     window.open(pdfUrl, "_blank");
   }, []);
 
