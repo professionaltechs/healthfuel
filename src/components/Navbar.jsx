@@ -2,12 +2,14 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import { saveAs } from "file-saver";
+import Image from "next/image";
 
 // STYLES
 import styles from "../app/page.module.css";
 
 // ICONS
 import { FiDownload } from "react-icons/fi";
+import logo from '../assets/LogoBlue.png'
 
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -73,7 +75,8 @@ const Navbar = () => {
             </div>
           </div>
           <div className={styles.navbarDropDownDetails}>
-            <h1 className={styles.navbarDropDownLogo}>Logo</h1>
+            {/* <h1 className={styles.navbarDropDownLogo}>Logo</h1> */}
+            <Image src={logo} alt="Logo" className={styles.mainLogo}/>
             <div>
               <p className={styles.greytext}>
                 <span className={styles.locationSpan}>Monday: </span>Closed
