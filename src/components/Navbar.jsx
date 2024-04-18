@@ -15,9 +15,12 @@ import { FaInstagram } from "react-icons/fa6";
 const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-  const downloadPDF = useCallback(() => {
+  const downloadPDF = useCallback(async () => {
     const pdfUrl = "./menu.pdf";
-    // saveAs(pdfUrl, "menu.pdf");
+    const pdfResponse = await fetch(pdfUrl);
+    if (!pdfResponse.ok) {
+      throw new Error("Failed to preload the PDF file");
+    }
     window.open(pdfUrl, "_blank");
   }, []);
 
@@ -66,7 +69,9 @@ const Navbar = () => {
         <button className={styles.menuPdfButton} onClick={downloadPDF}>
           View Menu
         </button>
-        <FaInstagram style={{fontSize: '25px', color: 'white', cursor: 'pointer '}}/>
+        <FaInstagram
+          style={{ fontSize: "25px", color: "white", cursor: "pointer " }}
+        />
       </div>
       <div className={`${styles.navbarDropDown}`}>
         <div className={styles.navbarDropDownInner}>

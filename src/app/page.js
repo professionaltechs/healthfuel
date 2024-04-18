@@ -20,7 +20,7 @@ export default function Home() {
         <div className={styles.topContent}>
           <div className={styles.topContentInner}>
             {/* <h1 className={styles.logo}>Logo</h1> */}
-            <Image src={logo} className={styles.mainLogo} />
+            <Image src={logo} alt="logo" className={styles.mainLogo} />
             <p className={styles.trust}>Guilt free, trusted nutrition.</p>
             <p className={styles.locationText}>Locations</p>
             <div className={styles.address}>
