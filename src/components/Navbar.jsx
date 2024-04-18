@@ -16,8 +16,8 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
   const downloadPDF = useCallback(() => {
-    const pdfUrl = "./menu.pdf";
-    saveAs(pdfUrl, "menu.pdf");
+    // const pdfUrl = "./menu.pdf";
+    // saveAs(pdfUrl, "menu.pdf");
     window.open(pdfUrl, "_blank");
   }, []);
 
