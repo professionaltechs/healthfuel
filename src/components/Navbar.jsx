@@ -89,7 +89,7 @@ const Navbar = () => {
           <div className={styles.navbarDropDownDetails}>
             {/* <h1 className={styles.navbarDropDownLogo}>Logo</h1> */}
             <Image src={logo} alt="Logo" className={styles.mainLogo} />
-            <div>
+            {/* <div>
               <p className={styles.greytext}>
                 <span className={styles.locationSpan}>Monday: </span>Closed
               </p>
@@ -106,18 +106,23 @@ const Navbar = () => {
               <span className={styles.locationSpan}>Saturday - Sunday:</span>7am
               - 3pm
             </p>
-            <hr className={styles.horizontailRow} />
+            <hr className={styles.horizontailRow} /> */}
             <p className={styles.greytext}>
-              <span className={styles.locationSpan}>Monday - Friday : </span>8am
-              - 8pm
+              <span className={styles.locationSpan}>Monday - Sunday : </span>
+              10am - 10pm
             </p>
             <p className={styles.greytext}>
-              <span className={styles.locationSpan}>Location: </span> Pantai
-              Pererenan No. 57, <br /> Pererenan, Bali 80351
+              <span className={styles.locationSpan}>Location: </span> Jl. Sempol
+              No.22, Pererenan, Kec. Mengwi, Kabupaten Badung, Bali 80351,
+              Indonesia
+            </p>
+            <p className={styles.greytext}>
+              <span className={styles.locationSpan}>Email: </span>
+              Healthfuel@resiliency.id
             </p>
             <p className={styles.greytext}>
               <span className={styles.locationSpan}>Whatsapp: </span>
-              +6285954959800
+              +61419538030
             </p>
           </div>
         </div>

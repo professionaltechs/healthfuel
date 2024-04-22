@@ -17,7 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "fimiar", sans-serif !important;
+  /* font-family: "fimiar", sans-serif !important; */
 }
 
 .menuButton {
@@ -79,18 +79,15 @@
   color: white;
 }
 
-
-
 .dropDownMenuPdfContainerInner {
   cursor: pointer;
   align-items: center;
   display: flex;
   gap: 10px;
-
 }
 
 .dropDownMenuPdf {
-    font-size: 35px;
+  font-size: 35px;
 }
 
 .navbarDropDownLogo {
@@ -174,12 +171,12 @@
     letter-spacing: 1px;
   }
 
-  .navbarDropDownInner {
+  /* .navbarDropDownInner {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-  }
+  } */
 
   .dropDownMenuPdf {
     font-size: 60px;
@@ -202,6 +199,15 @@
 
   .navbarDropDownDetails {
     width: 50%;
+  }
+}
+
+@media (min-width: 640px) {
+  .navbarDropDownInner {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 
