@@ -3,6 +3,8 @@ import "./globals.css";
 import "./font.css";
 import favIcon from "../app/icon.ico";
 
+import Script from 'next/script'
+
 const exo = Exo({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
@@ -14,9 +16,26 @@ export const metadata = {
   // icons: [{ rel: 'icon', url: favIcon }],
 };
 
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-KGXVMYFV6K"
+        />
+
+        <Script id="google-analytics">
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-KGXVMYFV6K');
+  `}
+        </Script>
+      </head>
       <body className={exo.className}>{children}</body>
     </html>
   );
