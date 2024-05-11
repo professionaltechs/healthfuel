@@ -35,6 +35,7 @@ export default function RootLayout({ children }) {
       gtag('config', 'G-KGXVMYFV6K');
   `}
         </Script>
+        <script src="/clarity.js" async></script>
       </head>
       <body className={exo.className}>{children}</body>
     </html>
